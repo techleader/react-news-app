@@ -1,8 +1,9 @@
 import React from "react";
+import BusinessNews from "../business/BusinessNews";
 
 const Home = () => {
     return (
-        <p>Home</p>
+        <BusinessNews></BusinessNews>
     );
 
 };
