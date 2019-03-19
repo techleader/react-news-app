@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TopHeadlines from "../components/TopHeadlines.js";
-import {  Card, CardImg,CardSubtitle, CardTitle, CardText,CardBody,MDBView, Row,Col, BodyBackgroundColor } from 'reactstrap';
+import {  Card, CardImg,CardSubtitle, CardTitle, CardText,CardBody, Row,Col, Button } from 'reactstrap';
 class Article extends Component {
 
     constructor(props) {
@@ -8,12 +8,20 @@ class Article extends Component {
         this.state = {
           status: null,
           totalResults: 0,
-          article: props.value         
+          article: props.value,
+           
+              
         };
-      
+      this.setName = this.setName.bind(this);
     }
 
+    setName(){
+      this.setState({
+        name: "rajesh"
+      })
+    }
   render() {
+    
     return (        
       <div>
          
@@ -26,8 +34,10 @@ class Article extends Component {
                 </a>
                <CardBody>
                     
-                      <CardSubtitle>Card subtitle</CardSubtitle>
+                      
                       <CardText>{this.state.article.content} </CardText>
+                   
+                   
                
                </CardBody>
           </Card>

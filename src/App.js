@@ -7,19 +7,23 @@ import Business from "./business/Business";
 import './App.css';
 import General from './general/General';
 import NewsByCountires from './components/NewsByCountries';
+import Entertainment from './entertainment/Entertainment';
+
+
 
 class App extends Component {
   render() {
     return (
         <BrowserRouter>
-        <div>
+        <div className = "App">
           <Navigation></Navigation>
           <Switch>
             <Route path="/" component={Home} exact></Route>
             <Route path="/general" component={General}/>
             <Route path="/business" component={Business}/>
             <Route path="/sports" component={Sports}/>    
-            <Route path="/components" component={NewsByCountires}/>        
+            <Route path="/entertainment" component={Entertainment}/>
+            <Route path="/components" component={NewsByCountires}/>          
         </Switch>
         </div>
         </BrowserRouter>

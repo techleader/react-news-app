@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Article from './Article';
-import {  Badge  } from 'reactstrap';
+import {   } from 'reactstrap';
 
 
 class TopHeadlines extends Component{
@@ -15,7 +15,7 @@ class TopHeadlines extends Component{
          
         };
       this.fetchBusinessNews(this.props.category);
-      // this.fetchGeneralNews();
+      
     }
 
     render(){
@@ -32,7 +32,6 @@ class TopHeadlines extends Component{
          </div> 
         );
     }
-
 
     fetchBusinessNews(category) {
       

@@ -17,7 +17,8 @@ const Navigation = () => {
                                 <NavLink to="/general"><Button color="info"> General </Button> </NavLink>
                                 <NavLink to="/business"><Button color="info">Business </Button> </NavLink>
                                 <NavLink to="/sports"><Button color="info">Sports </Button> </NavLink>
-                                <NavLink to=""><Button color="info">Entertainment </Button> </NavLink>
+                                <NavLink to="/entertainment"><Button color="info">Entertainment </Button> </NavLink>
+                                
                             </NavItem>
                     </Nav>
                 </Navbar>

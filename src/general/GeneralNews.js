@@ -8,7 +8,6 @@ class GeneralNews extends Component{
     return(
       <TopHeadlines category="general"></TopHeadlines>
     );
-     
   }
 }
 
