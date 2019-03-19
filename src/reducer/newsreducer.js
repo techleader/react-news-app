@@ -1,7 +1,9 @@
 
 const initialState = {
     generalVal : "false",
-    businessVal: "false"
+    businessVal: "false",
+    sportsVal: "false",
+    entertainmentVal: "false"
 }
 
 const newsreducer = (state = initialState, action) => {
@@ -22,7 +24,22 @@ switch(action.type) {
             state = {...state, businessVal:"true"};
         }            
     break;
-    break;
+    case "sports":
+    if(state.sportsVal == 'true') {
+        state = {...state, sportsVal:"false"};
+    } else {
+        state = {...state, sportsVal:"true"};
+    }            
+break;
+
+case "entertainment":
+if(state.entertainmentVal == 'true') {
+    state = {...state, entertainmentVal:"false"};
+} else {
+    state = {...state, entertainmentVal:"true"};
+}            
+break;
+
 
 }
 return state;

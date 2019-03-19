@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {connect} from "react-redux";
-import { Button,Form,Row,Col} from 'reactstrap';
+import { Button,Form,Row,Col,Alert} from 'reactstrap';
 import Article from './Article';
 import NewsCource from "../components/NewsCource.css";
 
@@ -13,31 +13,47 @@ class NewsSources extends Component{
          console.log(this.props);
         return(
              <div className = "App"> 
-                                     
+                   <br></br>                  
                <Row>
-               <Col> Displaying General source :  {generalVal}   </Col>
-               <Col> Displaying Business source :  {businessVal}   </Col>
-                  <Col>
+               <Col></Col>
+                  <Alert color="success">
                   <h4>Please select your news source</h4>
-                        <label class="switch">
+                  <Col>
+                  <Row>
+                     <Col> General</Col>
+                        <Col><label class="switch">
                            <input type="checkbox" onClick ={general} data-toggle="toggle" data-onstyle="success" data-offstyle="danger"/>
                            <span class="slider"></span>
-                        </label>  General<br></br>
-                        <label class="switch">
-                           <input type="checkbox" onClick ={business}/>
-                           <span class="slider"></span>
-                        </label>  Business<br></br>
-                        <label class="switch">
+                        </label></Col>
+                   </Row>
+                     <Row>
+                           <Col> Business</Col>
+                           <Col><label class="switch">
+                              <input type="checkbox" onClick ={business}/>
+                              <span class="slider"></span>
+                           </label>
+                        </Col>
+                  </Row>
+                     <Row>
+                        <Col>  Sports</Col>
+                        <Col> <label class="switch">
                            <input type="checkbox" onClick ={sports}/>
                            <span class="slider"></span>
-                        </label>  Sports<br></br>
-                        <label class="switch">
+                        </label></Col>
+                     </Row>
+                     <Row>
+                        <Col> Entertainment</Col>
+                        <Col>  <label class="switch">
                            <input type="checkbox" onClick ={entertainment}/>
                            <span class="slider"></span>
-                        </label>  entertainment<br></br>
-                        </Col>
+                        </label> </Col>
+                     </Row>
+                     
+               
+                  </Col>
                         
-                        <Col></Col>
+                  </Alert>
+                <Col></Col>
                 </Row> 
                  </div>
         );
