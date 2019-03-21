@@ -8,9 +8,8 @@ import NewsCource from "../components/NewsCource.css";
 class NewsSources extends Component{
 
     render(){
-        const {generalVal, businessVal, general,business,sports,entertainment} = this.props;   
-         console.log("Render called ");
-         console.log(this.props);
+        const {generalVal, businessVal,sportsVal,entertainmentVal, general,business,sports,entertainment} = this.props;   
+        console.log("Render called ");
         return(
              <div className = "App"> 
                    <br></br>                  
@@ -22,14 +21,14 @@ class NewsSources extends Component{
                   <Row>
                      <Col> General</Col>
                         <Col><label class="switch">
-                           <input type="checkbox" onClick ={general} data-toggle="toggle" data-onstyle="success" data-offstyle="danger"/>
+                           <input type="checkbox"  value='2' checked={generalVal === "true"} onClick ={general} />
                            <span class="slider"></span>
                         </label></Col>
                    </Row>
                      <Row>
                            <Col> Business</Col>
                            <Col><label class="switch">
-                              <input type="checkbox" onClick ={business}/>
+                              <input type="checkbox" checked={businessVal === "true"} onClick ={business}/>
                               <span class="slider"></span>
                            </label>
                         </Col>
@@ -37,14 +36,14 @@ class NewsSources extends Component{
                      <Row>
                         <Col>  Sports</Col>
                         <Col> <label class="switch">
-                           <input type="checkbox" onClick ={sports}/>
+                           <input type="checkbox" checked={sportsVal === "true"} onClick ={sports}/>
                            <span class="slider"></span>
                         </label></Col>
                      </Row>
                      <Row>
                         <Col> Entertainment</Col>
                         <Col>  <label class="switch">
-                           <input type="checkbox" onClick ={entertainment}/>
+                           <input type="checkbox"  checked={entertainmentVal === "true"} onClick ={entertainment}/>
                            <span class="slider"></span>
                         </label> </Col>
                      </Row>
@@ -85,14 +84,16 @@ const mapDispatchToProps = (dispatch) => {
  };
 
  const mapStateToProps = (state) => {
-    console.log("InMaptoProps" );
-    console.log(state);
-       return {
-        generalVal : state.generalVal,
-        businessVal : state.businessVal
-    };
-    
- };
+   console.log("InMaptoProps in newsource" );
+   console.log(state);
+      return {
+       generalVal : state.generalVal,
+       businessVal : state.businessVal,
+       sportsVal: state.sportsVal,
+       entertainmentVal: state.entertainmentVal
+   };
+   
+};
 
  export default connect(mapStateToProps, mapDispatchToProps)(NewsSources);
  

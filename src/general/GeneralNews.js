@@ -6,7 +6,10 @@ import TopHeadlines from "../components/TopHeadlines.js";
 class GeneralNews extends Component{
   render() {
     return(
-      <TopHeadlines category="general"></TopHeadlines>
+      <div>
+        <h2>General News</h2>
+        <TopHeadlines category="general"></TopHeadlines>
+      </div>
     );
   }
 }

@@ -7,8 +7,9 @@ import { Navbar,Nav,NavItem,NavbarBrand, Button, Row,Col } from 'reactstrap';
 class Navigation extends  Component{
 
     render(){
-    const {generalVal, businessVal, general,business,sportsVal,entertainmentVal} = this.props;   
-    console.log("In Navigation " + generalVal)
+    const {generalVal, businessVal,sportsVal,entertainmentVal} = this.props;   
+        
+    
 
     let homeButton = "";
     let businessButton = "";
@@ -41,9 +42,8 @@ class Navigation extends  Component{
                                 {homeButton} 
                                 {businessButton} 
                                 {sportsButton} 
-                                {entertainmentButton}                                
-                               
-                                
+                                {entertainmentButton}  
+                                <NavLink to="/Settings"><Button color="info"> Settings</Button> </NavLink>
                             </NavItem>
                     </Nav>
                 </Navbar>
@@ -54,7 +54,7 @@ class Navigation extends  Component{
        </div>
        
     );
-                            }
+    }
 
 }
 

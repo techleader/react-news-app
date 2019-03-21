@@ -7,7 +7,10 @@ class BusinessNews extends Component {
 
   render() {
     return (  
-      <TopHeadlines category="business"></TopHeadlines>
+      <div>
+        <h2>Business News</h2>
+      <TopHeadlines category="business"></TopHeadlines></div>
+      
     );
   }
 

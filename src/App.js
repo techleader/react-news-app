@@ -8,6 +8,7 @@ import './App.css';
 import General from './general/General';
 import NewsByCountires from './components/NewsByCountries';
 import Entertainment from './entertainment/Entertainment';
+import Settings from './components/Settings';
 
 
 
@@ -23,7 +24,8 @@ class App extends Component {
             <Route path="/business" component={Business}/>
             <Route path="/sports" component={Sports}/>    
             <Route path="/entertainment" component={Entertainment}/>
-            <Route path="/components" component={NewsByCountires}/>          
+            <Route path="/components" component={NewsByCountires}/> 
+            <Route path="/Settings" component={Settings} exact></Route>        
         </Switch>
         </div>
         </BrowserRouter>

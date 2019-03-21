@@ -5,7 +5,10 @@ class SportsNews extends Component{
 
   render() {
     return (  
+      <div>
+      <h2>Sports News</h2>
       <TopHeadlines category="sports"></TopHeadlines>
+      </div>
     );
   }
 

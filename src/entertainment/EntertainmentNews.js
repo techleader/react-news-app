@@ -6,7 +6,10 @@ class EntertainmentNews extends Component{
     render(){
 
         return(
-            <TopHeadlines category="entertainment"></TopHeadlines>
+            <div>
+            <h2>Entertainment News</h2>
+            <TopHeadlines category="entertainment"></TopHeadlines></div>
+            
         );
     }
 }

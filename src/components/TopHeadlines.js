@@ -10,7 +10,6 @@ class TopHeadlines extends Component{
         super(props);
         this.state = {
           status: null,
-        
           articles: []
          
         };
