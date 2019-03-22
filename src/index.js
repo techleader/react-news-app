@@ -29,9 +29,6 @@ export const loadState = () => {
   }; 
 
 const persistedState = loadState();
-console.log("------------")
-console.log(persistedState)
-console.log("-----------------")
 const store = createStore(newsreducer, persistedState);
 
 store.subscribe(() =>{

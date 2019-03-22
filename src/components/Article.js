@@ -26,19 +26,14 @@ class Article extends Component {
       <div>
          
        <Row>           
-         <Col sm="12"md={{ size: 4, offset: 4 }}>
+         <Col sm="12"md={{ size:8, offset: 2 }}>
           <Card>
           <CardTitle> {this.state.article.title} </CardTitle>
                 <a href={this.state.article.url} className="danger"> 
-                  <CardImg top width="100%" src={this.state.article.urlToImage}  alt="Card image cap"  />
+                  <CardImg width="100" src={this.state.article.urlToImage}  alt="Card image cap"  />
                 </a>
                <CardBody>
-                    
-                      
                       <CardText>{this.state.article.content} </CardText>
-                   
-                   
-               
                </CardBody>
           </Card>
           </Col>
